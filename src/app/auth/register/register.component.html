@@ -1,0 +1,31 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <!-- <label for="Name">Name</label> -->
+        <input formControlName="name" placeholder="Name" id="Name" type="text" class="form-control">
+        <span class="error" *ngIf="name ? name.invalid && name.touched : true">Name is invalid</span>
+
+    </div>
+
+    <div class="form-group">
+        <!-- <label for="Username">UserName</label> -->
+        <input formControlName="username" placeholder="Username" id="Username" type="text" class="form-control">
+        <span class="error" *ngIf="username ? username.invalid && username.touched : true">Username is invalid</span>
+    </div>
+
+    <div class="form-group">
+        <!-- <label for="email">Email</label> -->
+        <input formControlName="email" placeholder="email" id="email" type="email" class="form-control">
+        <span class="error" *ngIf="email ? email.invalid && email.touched : true">Email is invalid</span>
+    </div>
+
+    <div class="form-group">
+        <!-- <label for="password">Password</label> -->
+        <input formControlName="password" placeholder="password" id="password" type="password" class="form-control">
+        <span class="error" *ngIf="password ? password.invalid && password.touched : true">password wrong</span>
+    </div>
+
+    <button class="btn btn-primary" type="submit">
+        Submit
+    </button>
+</form>
